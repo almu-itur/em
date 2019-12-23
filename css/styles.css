@@ -1,0 +1,198 @@
+/* APP */
+/* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.input-bar {
+    display: flex;
+    width: 90%;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#button-add {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 5px;
+}
+
+.logout-button-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: flex-end;    
+}
+
+.logout-button {
+    border-radius: 10%;
+    padding: 10px;
+    margin: 10px;
+    color:White;
+    font-size:14px;
+    background-color: grey;
+    text-align: right;
+    text-justify: center;
+}
+
+.options-meal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #E4717A;
+    border-radius: 10px;
+}
+
+.meal {
+    background-color: white;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 10%;
+    border-radius: 8px;
+}
+
+.meal textarea {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    resize: none;
+}
+
+.custom-plan {
+    background: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.custom-plan-categories-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.category {
+    width: 10%;
+    padding: 5px;
+    margin: 20px 5px;
+    border-radius: 10px;
+}
+.category-name {
+    background-color: rgb(233, 177, 186);
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    border-radius: 10px;
+}
+
+.error {
+    color: red;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #880e4f;
+}
+
+.aLink{
+  text-decoration: none !important;
+  color: white;  
+}
+
+.aLink:hover{
+  text-decoration: none !important;
+  color: rgb(224, 219, 219);  
+}
+
+
+/* HOME */
+.home {
+    width: 90%;
+    margin: 2% auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-title {
+    font-weight: bold;
+    margin: 3% 0 2% 0;
+    text-align: center;
+}
+
+.selectDiet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.selectDiet-img {
+    width: 90%;
+    height: 100%;
+    cursor: pointer;  
+}
+
+.selectPlan {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.selectPlan-img {
+    margin-right: 1%;
+    width: 90%;
+    height: 100%; 
+    cursor: pointer; 
+}
+
+.selectIntolerance {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.selectIntolerance-img {
+    margin-right: 1%;
+    width: 90%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.home-create-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.home-create-button {
+    color: white;
+    background-color: #E4717A;
+    width: 30%;
+    height: 5%;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    margin: 5%;
+}
+
+select, input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
