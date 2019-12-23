@@ -1,7 +1,7 @@
 // TODO Import css
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DEFAULT_MEALS_IN_A_DAY } from '../../../data';
+import { DEFAULT_MEALS_IN_A_DAY } from '../../data';
 import Meal from '../Meal';
 
 const Day = ({ dayName, meals }) => (

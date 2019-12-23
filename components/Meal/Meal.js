@@ -9,7 +9,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Meal.css';
+import './Meal.scss';
 
 const Meal = ({
   meal,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DAYS } from '../../../data';
-import './MealPlan.css';
+import { DAYS } from '../../data';
+import './MealPlan.scss';
 import MEALPLAN from '../../mockData';
 import Day from '../Day';
 
