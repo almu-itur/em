@@ -1,29 +1,23 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { DAYS } from '../../data';
-import './MealPlan.scss';
-import MEALPLAN from '../../mockData';
-import Day from '../Day';
+import { MealPlanInfo, MealPlanMobile, MealPlanDesktop } from '.';
 
-const MealPlan = ({ name, title, type }) => (
-  <div className="mealplan">
-    <div className="mealplan mealplan-info">
-      <h1 className="mealplan mealplan-title">{title}</h1>
-      <p className="mealplan mealplan-name">{name}</p>
-      <p className="mealplan mealplan-type">{type}</p>
+const MealPlan = ({ name, title, type }) => {
+  const [isDesktop, setIsDesktop] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth < 300) setIsDesktop(false);
+  }, []);
+
+  return (
+    <div className="mealplan">
+      <MealPlanInfo name={name} title={title} type={type} />
+      {isDesktop
+        ? <MealPlanDesktop />
+        : <MealPlanMobile />}
     </div>
-    <div className="mealplan mealplan-meals-container">
-      {
-        DAYS.map((day) => {
-          const meals = MEALPLAN[day];
-          return (
-            <Day key={day} dayName={day} meals={meals} />
-          );
-        })
-        }
-    </div>
-  </div>
-);
+  );
+};
 
 MealPlan.propTypes = {
   name: PropTypes.string,
@@ -33,8 +27,8 @@ MealPlan.propTypes = {
 
 MealPlan.defaultProps = {
   name: '',
-  title: 'MEALPLAN',
-  type: 'DEFAULT',
+  title: 'mealplan',
+  type: 'no type',
 };
 
 export default MealPlan;

@@ -12,7 +12,7 @@ const Option = ({
 }) => (
   <label htmlFor={alt}>
     <input type={inputType} name={name} id={id} value={id} onChange={handleInputChange} />
-    <img className={imgClass} src={`../../../images/${imgFile}`} alt={alt} />
+    <img className={imgClass} src={`/images/${imgFile}`} alt={alt} />
   </label>
 );
 

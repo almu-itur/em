@@ -1,3 +1,8 @@
-import MealPlan from './MealPlan';
 
-export default MealPlan;
+import MealPlanInfo from './MealPlanInfo';
+import MealPlanDesktop from './MealPlanDesktop';
+import MealPlanMobile from './MealPlanMobile';
+
+export {
+  MealPlanInfo, MealPlanDesktop, MealPlanMobile,
+};

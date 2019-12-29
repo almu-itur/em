@@ -1,7 +1,6 @@
 import MOCKED_MEALPLAN from './mockData';
 
 const logic = {
-  _mealPlan: sessionStorage.getItem('mealplan') || null,
 
   getMealPlan(diet, plan, intolerances) {
     console.log(diet, plan, intolerances);

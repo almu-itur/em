@@ -1,8 +1,7 @@
-// TODO Import css
 import React from 'react';
 import PropTypes from 'prop-types';
-import { DEFAULT_MEALS_IN_A_DAY } from '../../data';
-import Meal from '../Meal';
+import { DEFAULT_MEALS_IN_A_DAY } from '../../constants';
+import MealCard from '../MealCard';
 
 const Day = ({ dayName, meals }) => (
   <>
@@ -11,11 +10,11 @@ const Day = ({ dayName, meals }) => (
         <h4 className="mealplan-day-name">{dayName}</h4>
       </div>
       <div className="mealplan-day mealplan-day-meals-container" />
-      {DEFAULT_MEALS_IN_A_DAY.map((defaultMeal) => (
+      {Object.keys(DEFAULT_MEALS_IN_A_DAY).map((defaultMeal) => (
         <div key={defaultMeal} className="mealplan-default-meal-container">
           <h2 className="mealplan-default-meal-title">{defaultMeal}</h2>
           {meals[defaultMeal].map((meal) => (
-            <Meal key={meal.id} meal={meal} />
+            <MealCard key={meal.id} meal={meal} />
           ))}
         </div>
       ))}

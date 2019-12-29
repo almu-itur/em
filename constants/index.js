@@ -1,6 +1,12 @@
 const DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
 
-const DEFAULT_MEALS_IN_A_DAY = ['breakfast', 'midMorning', 'lunch', 'afternoon', 'dinner'];
+const DEFAULT_MEALS_IN_A_DAY = {
+  breakfast: 'Breakfast',
+  midMorning: 'Mid morning',
+  lunch: 'Lunch',
+  afternoon: 'Afternoon',
+  dinner: 'Dinner',
+};
 
 const OPTION_SECTIONS = [
   {

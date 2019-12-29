@@ -11,7 +11,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Meal.scss';
 
-const Meal = ({
+const MealCard = ({
   meal,
   // searchParams,
   // position,
@@ -20,12 +20,13 @@ const Meal = ({
   // addMealToBanList,
   // removeMealFromCurrentMealPlan,
 }) => {
-  const { meal: { name, id, isFavourite } } = meal;
+  console.log('Meal received', meal);
+  // const { meal: { name, id, isFavourite } } = meal;
   return (
   // <div className={`meal meal${isFavourite ? ' favourite' : ''}`}>
     <div className="meal">
       {/* draggable onDragStart={onDragStart} */}
-      <p className="meal-font">{name}</p>
+      {/* <p className="meal-font">{name}</p> */}
       <div className="options-meal">
         {/* <button
           type="button"
@@ -50,7 +51,7 @@ const Meal = ({
   );
 };
 
-Meal.propTypes = {
+MealCard.propTypes = {
   meal: PropTypes.objectOf(PropTypes.string).isRequired,
   // searchParams: PropTypes.objectOf(PropTypes.object).isRequired,
   // position: PropTypes.objectOf(PropTypes.string).isRequired,
@@ -60,4 +61,4 @@ Meal.propTypes = {
   // addMealToBanList: PropTypes.func.isRequired,
 };
 
-export default Meal;
+export default MealCard;

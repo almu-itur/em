@@ -5,6 +5,14 @@ body {
   margin: 0;
 }
 
+// REGISTER
+.login-register-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+}
+
 .input-bar {
     display: flex;
     width: 90%;
@@ -195,4 +203,67 @@ select, input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+/* MEALPLAN */
+
+.mealplan {
+    background: white;
+    text-align: center;
+    margin: 0 auto;
+}
+.mealplan-title {
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.mealplan-name {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.mealplan-type {
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.mealplan-meals-container {
+    width: 95%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #F77B72;
+    flex-direction: row;
+}
+
+.mealplan-day {
+   display: flex;
+   flex-direction: column; 
+}
+
+.mealplan-day-name-container {
+    align-self: auto;
+    border-bottom: 2px solid #f77b72;
+}
+
+.mealplan-day-name {
+    font-size: 0.8em;
+    text-transform: capitalize;
+}
+
+.mealplan-day-meals-container {
+    flex-direction: column
+}
+
+.mealplan-default-meal-container {
+    padding: 5px;
+    margin: 20px 5px;
+    background-color: rgb(226, 225, 225);
+    border-radius: 10px;
+}
+
+.mealplan-default-meal-title {
+    margin: 10px;
+    font-size: 0.6em;
 }
