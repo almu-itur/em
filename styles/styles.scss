@@ -5,13 +5,37 @@ body {
   margin: 0;
 }
 
-// REGISTER
-.login-register-container {
+// LANDING
+.register-general-container {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 10px;
+    margin: 1%;
 }
+.register-left-container {
+    display: block;
+    background-image: url(/static/media/register-image.5856cd2c.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    width: 50%;
+    height: 99vh;
+    margin: 1%
+}
+
+.register-right-container {
+    margin: auto;
+    justify-content: center;
+}
+
+// FOOTER
+
+.footer {
+    background-color: black;
+    width: 100%;
+    margin-top: 50px;
+    height: 20px;
+}
+
+// GENERAL
 
 .input-bar {
     display: flex;

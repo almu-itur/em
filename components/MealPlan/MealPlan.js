@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { MealPlanInfo, MealPlanMobile, MealPlanDesktop } from '.';
 
-const MealPlan = ({ name, title, type }) => {
+const MealPlan = (props) => {
+  const { name, title, type } = props;
   const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
     if (window.innerWidth < 300) setIsDesktop(false);
   }, []);
+
+  console.log('Mealplanprops', props);
 
   return (
     <div className="mealplan">
@@ -26,7 +29,7 @@ MealPlan.propTypes = {
 };
 
 MealPlan.defaultProps = {
-  name: '',
+  name: 'no name',
   title: 'mealplan',
   type: 'no type',
 };

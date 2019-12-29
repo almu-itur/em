@@ -1,6 +1,3 @@
-import 'bootstrap/scss/bootstrap.scss'; // TODO: split by components.
-import '../styles/styles.scss';
-
 import React, { useState } from 'react';
 import OptionSection from '../containers/OptionSection';
 import logic from '../logic';

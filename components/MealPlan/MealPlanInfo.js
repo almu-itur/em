@@ -10,15 +10,9 @@ const MealPlanInfo = ({ name, title, type }) => (
 );
 
 MealPlanInfo.propTypes = {
-  name: PropTypes.string,
-  title: PropTypes.string,
-  type: PropTypes.string,
-};
-
-MealPlanInfo.defaultProps = {
-  name: 'no name saved',
-  title: 'mealplan',
-  type: 'default',
+  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default MealPlanInfo;
