@@ -48,8 +48,8 @@ const CredentialsBox = ({ onSubmit, isRegisterView }) => {
           </Form.Group>
         )}
 
-        <Button id="register-button" variant="primary" type="submit">
-          {isRegisterView ? 'Submit' : 'Login'}
+        <Button id="register-button" variant="primary" type="submit" onClick={handleSubmit}>
+          {isRegisterView ? 'Register' : 'Login'}
         </Button>
       </Form>
     </div>
