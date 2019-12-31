@@ -8,70 +8,102 @@ const DEFAULT_MEALS_IN_A_DAY = {
   dinner: 'Dinner',
 };
 
-const OPTION_SECTIONS = [
+const IMAGES_PATH = '/images/';
+
+const ACTIVE_MODIFIER = '-active';
+
+const OPTIONS_TITLE_CLASS = 'options-title';
+
+const SEARCH_OPTIONS = {
+  DIET: 'diet',
+  PLAN: 'plan',
+  INTOLERANCES: 'intolerances',
+};
+
+const ROUTES = {
+  MEALPLAN: '/mealplan',
+};
+
+const BUTTON_STYLE = {
+  CREATE: {
+    TYPE: 'submit',
+    TEXT: 'create mealplan',
+    DIV: 'button-create-div-container',
+    CLASS: 'button-create',
+  },
+};
+
+const CONTAINER_STYLE = {
+  HOME: 'home',
+};
+
+// TODO: GET SECTIONS FROM BACKEND
+const SECTION_OPTIONS = [
   {
     title: 'Choose a diet',
-    sectionClass: 'selectDiet',
-    id: 'selectDiet',
-    options: [{
-      imgFile: 'vegan.png',
-      alt: 'vegan',
-      imgClass: 'selectDiet-img',
-      id: 'vegan',
-      inputType: 'radio',
-      name: 'diet',
-    },
-    {
-      imgFile: 'vegetarian.png',
-      id: 'vegetarian',
-      alt: 'vegetarian',
-      imgClass: 'selectDiet-img',
-      inputType: 'radio',
-      name: 'diet',
-    },
-    {
-      imgFile: 'pescatarian.png',
-      alt: 'pescatarian',
-      imgClass: 'selectDiet-img',
-      id: 'pescatarian',
-      inputType: 'radio',
-      name: 'diet',
-    },
-    {
-      imgFile: 'flexitarian.png',
-      alt: 'flexitarian',
-      imgClass: 'selectDiet-img',
-      id: 'flexitarian',
-      inputType: 'radio',
-      name: 'diet',
-    }],
+    containerClass: 'options-container',
+    sectionClass: 'select-option',
+    id: 'diet',
+    options: [
+      {
+        imgFile: 'vegan.png',
+        alt: 'vegan',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
+        id: 'vegan',
+        inputType: 'radio',
+        name: 'diet',
+      },
+      {
+        imgFile: 'vegetarian.png',
+        id: 'vegetarian',
+        alt: 'vegetarian',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
+        inputType: 'radio',
+        name: 'diet',
+      },
+      {
+        imgFile: 'pescatarian.png',
+        alt: 'pescatarian',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
+        id: 'pescatarian',
+        inputType: 'radio',
+        name: 'diet',
+      },
+      {
+        imgFile: 'flexitarian.png',
+        alt: 'flexitarian',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
+        id: 'flexitarian',
+        inputType: 'radio',
+        name: 'diet',
+      },
+    ],
   },
   {
     title: 'Choose a plan',
-    sectionClass: 'selectPlan',
-    id: 'selectPlan',
+    containerClass: 'options-container',
+    sectionClass: 'select-option',
+    id: 'plan',
     options: [
       {
-        imgFile: 'balanced-text-light.png',
+        imgFile: 'balanced.png',
         alt: 'balanced',
-        imgClass: 'selectPlan-img',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
         id: 'balanced',
         inputType: 'radio',
         name: 'plan',
       },
       {
-        imgFile: 'diet-text-light.png',
+        imgFile: 'diet.png',
         alt: 'diet',
-        imgClass: 'selectPlan-img',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
         id: 'diet',
-        inputType: 'radio',
-        name: 'plan',
-      },
-      {
-        imgFile: 'custom-text-light.png',
-        alt: 'custom',
-        imgClass: 'selectPlan-img',
-        id: 'custom',
         inputType: 'radio',
         name: 'plan',
       },
@@ -79,13 +111,15 @@ const OPTION_SECTIONS = [
   },
   {
     title: 'Select intolerance',
-    sectionClass: 'selectIntolerance',
-    id: 'selectIntolerance',
+    containerClass: 'options-container-color',
+    sectionClass: 'select-option',
+    id: 'intolerances',
     options: [
       {
         imgFile: 'lactose.png',
         alt: 'lactose',
-        imgClass: 'selectPlan-img',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
         id: 'lactose',
         inputType: 'checkbox',
         name: 'intolerances',
@@ -93,7 +127,8 @@ const OPTION_SECTIONS = [
       {
         imgFile: 'gluten.png',
         alt: 'gluten',
-        imgClass: 'selectPlan-img',
+        imgClass: 'home-select-option-img',
+        divImgClass: 'home-image-container',
         id: 'gluten',
         inputType: 'checkbox',
         name: 'intolerances',
@@ -102,6 +137,7 @@ const OPTION_SECTIONS = [
   },
 ];
 
+// TODO: MOVE SEARCH TEMPLATES TO BACKEND
 const data = {
 
   selectPlan(plan) {
@@ -540,5 +576,15 @@ const data = {
 };
 
 export {
-  data, DAYS, DEFAULT_MEALS_IN_A_DAY, OPTION_SECTIONS,
+  data,
+  DAYS,
+  DEFAULT_MEALS_IN_A_DAY,
+  SECTION_OPTIONS,
+  IMAGES_PATH,
+  ACTIVE_MODIFIER,
+  OPTIONS_TITLE_CLASS,
+  SEARCH_OPTIONS,
+  ROUTES,
+  BUTTON_STYLE,
+  CONTAINER_STYLE,
 };

@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import OptionSection from '../containers/OptionSection';
 import logic from '../logic';
 import filterArrayByChecked from '../utils/filter-array-by-checked';
-import { OPTION_SECTIONS } from '../constants';
+import {
+  SECTION_OPTIONS,
+  SEARCH_OPTIONS,
+  ROUTES,
+  BUTTON_STYLE,
+  CONTAINER_STYLE,
+} from '../constants';
 import Button from '../components/UI/Button';
 
 const Home = () => {
@@ -11,16 +17,17 @@ const Home = () => {
   const [intolerances, setIntolerances] = useState([]);
 
   const handleInputChange = (event) => {
+    const { DIET, PLAN, INTOLERANCES } = SEARCH_OPTIONS;
     const {
       target: { name, value, checked },
     } = event;
 
     switch (name) {
-      case 'diet':
+      case DIET:
         return setDiet(value);
-      case 'plan':
+      case PLAN:
         return setPlan(value);
-      case 'intolerances': {
+      case INTOLERANCES: {
         const updatedArray = filterArrayByChecked(checked, intolerances, value);
         return setIntolerances(updatedArray);
       }
@@ -29,33 +36,44 @@ const Home = () => {
     }
   };
 
-  const generateMealPlan = (event) => {
+  const handleCreateMealPlan = (event) => {
     event.preventDefault();
     const mealPlan = logic.getMealPlan(diet, plan, intolerances);
     logic.saveMealPlanOnSessionStorage(mealPlan);
-    // logic.goToPage('/mealplan');
+    logic.redirect(ROUTES.MEALPLAN);
+  };
+
+  const getValue = (id) => {
+    const { DIET, PLAN } = SEARCH_OPTIONS;
+    if (id === DIET) return diet;
+    if (id === PLAN) return plan;
+    return intolerances;
   };
 
   return (
-    <div className="home">
-      <form onSubmit={generateMealPlan}>
-        {OPTION_SECTIONS.map(({
-          id, title, sectionClass, options,
-        }) => (
-          <OptionSection
-            key={id}
-            handleInputChange={handleInputChange}
-            title={title}
-            sectionClass={sectionClass}
-            options={options}
-          />
-        ))}
+    <div className={CONTAINER_STYLE.HOME}>
+      <form onSubmit={handleCreateMealPlan}>
+        {SECTION_OPTIONS.map(
+          ({
+            id, title, sectionClass, options, containerClass,
+          }) => (
+            <OptionSection
+              key={id}
+              handleInputChange={handleInputChange}
+              title={title}
+              containerClass={containerClass}
+              sectionClass={sectionClass}
+              options={options}
+              sectionValue={getValue(id)}
+            />
+          ),
+        )}
         <Button
-          buttonType="submit"
-          buttonDivClass="home-create-button-container"
-          buttonClass="home-create-button"
-          text="CREATE MEALPLAN"
-          onClick={generateMealPlan}
+          buttonType={BUTTON_STYLE.CREATE.TYPE}
+          buttonDivClass={BUTTON_STYLE.CREATE.DIV}
+          buttonClass={BUTTON_STYLE.CREATE.CLASS}
+          text={BUTTON_STYLE.CREATE.TEXT}
+          onClick={handleCreateMealPlan}
         />
       </form>
     </div>
