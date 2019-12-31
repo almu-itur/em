@@ -37,7 +37,7 @@ const CredentialsBox = ({ onSubmit, isRegisterView }) => {
         </Form.Group>
 
         {isRegisterView && (
-          <Form.Group controlId="formCheckbox">
+          <Form.Group controlId="formBasicCheckbox">
             <Form.Check
               required
               onChange={() => setSubmitCheckbox(!submitCheckbox)}
@@ -48,7 +48,7 @@ const CredentialsBox = ({ onSubmit, isRegisterView }) => {
           </Form.Group>
         )}
 
-        <Button variant="primary" type="submit">
+        <Button id="register-button" variant="primary" type="submit">
           {isRegisterView ? 'Submit' : 'Login'}
         </Button>
       </Form>

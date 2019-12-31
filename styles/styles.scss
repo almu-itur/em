@@ -11,19 +11,47 @@ body {
     margin: 1%;
 }
 .register-left-container {
-    display: block;
-    background-image: url(/static/media/register-image.5856cd2c.png);
+    background-image: url('/images/register-image.png');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: 50%;
     width: 50%;
     height: 99vh;
     margin: 1%
 }
 
-.register-right-container {
+.register-right-container { 
     margin: auto;
     justify-content: center;
+}
+
+.register-app-title {
+    font-size: 40px;
+    font-weight: 200;
+    color: #F77B72
+}
+
+.register-right-logo {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/logo-transparent.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.register-login-redirect-button {
+    border: 0;
+    color: #3897f0;
+    color: rgba(var(--h5f,56,151,240),1);
+    display: inline;
+    padding: 0;
+    position: relative;
+}
+
+#register-button {
+    background-color: #F77B72;
+    border-color: #F77B72;
 }
 
 // FOOTER
