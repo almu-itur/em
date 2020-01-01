@@ -7,11 +7,11 @@ body {
 }
 
 // LANDING
-.register-general-container {
+.landing {
     display: flex;
     margin: 1%;
 }
-.register-left-container {
+.landing-left-container {
     background-image: url('/images/register-image.png');
     background-repeat: no-repeat;
     background-position: 50%;
@@ -20,18 +20,12 @@ body {
     margin: 1%
 }
 
-.register-right-container { 
+.landing-right-container { 
     margin: auto;
     justify-content: center;
 }
 
-.register-app-title {
-    font-size: 40px;
-    font-weight: 200;
-    color: #F77B72
-}
-
-.register-right-logo {
+.landing-right-logo {
     margin: auto;
     width: 200px;
     height: 200px;
@@ -41,7 +35,7 @@ body {
     background-position: 50%;
 }
 
-.register-login-redirect-button {
+.landing-redirect-button {
     border: 0;
     color: #3897f0;
     color: rgba(var(--h5f,56,151,240),1);
@@ -50,7 +44,9 @@ body {
     position: relative;
 }
 
-#register-button {
+// CREDENTIALSBOX
+
+#credentials-button {
     background-color: #F77B72;
     border-color: #F77B72;
 }
@@ -94,19 +90,6 @@ body {
     justify-content: center;
 }
 
-.select-option-color {
-     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.select-option label {
-    margin-right: 10px;
-}
-.select-option-center label {
-    margin-right: 10px;
-}
 .home-image-container:hover .home-select-option-img {
     opacity: 0.3;
 }
@@ -117,6 +100,7 @@ body {
     opacity: 1;
     transition: .5s ease;
     background-color: #E4717A;
+    margin-left: 10px;
 }
 .home-select-option-img-active {
     width: 270px;
@@ -126,17 +110,12 @@ body {
     transition: .3s ease;
     background-color: transparent;
 }
-.form-section-color {
-    padding-top: 0.5px;
-    padding-bottom: 20px;
-    margin-top: 1%;
-    background-color: rgb(241, 239, 239);
-}
 
 .button-create-div-container{
     display: flex;
     justify-content: center;
 }
+
 .button-create {
     color: white;
     background-color: #F77B72;
@@ -155,7 +134,7 @@ select, input {
 }
 
 
-// GENERAL
+// TO DO: Review styles below
 
 .input-bar {
     display: flex;

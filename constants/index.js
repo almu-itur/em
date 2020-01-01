@@ -31,10 +31,82 @@ const BUTTON_STYLE = {
     DIV: 'button-create-div-container',
     CLASS: 'button-create',
   },
+  REDIRECT: {
+    TYPE: 'submit',
+    CLASS: 'landing-redirect-button',
+  },
+  CREDENTIAL: {
+    ID: 'credentials-button',
+    VARIANT: 'primary',
+    TYPE: 'submit',
+  },
+};
+
+const LANDING_STYLE = {
+  CONTAINER: 'landing',
+  LEFT_CONTAINER: 'landing-left-container',
+  RIGHT_CONTAINER: 'landing-right-container',
+  RIGHT_CONTAINER_LOGO: 'landing-right-logo',
+};
+
+const TEXT = {
+  ALREADY_REGISTERED: 'Already registered? Click ',
+  NOT_REGISTERED: 'Not yet registered? Click ',
+  TO_LOG_IN: ' to log in.',
+  TO_REGISTER: ' to register.',
+  HERE: 'here',
+  REGISTER: 'Register',
+  LOGIN: 'Login',
+  LABEL_ACCEPT_TERMS:
+    "By clicking here I accept Easymeals' terms and conditions.",
+  PLACEHOLDER_PASSWORD: 'Password',
+  PLACEHOLDER_EMAIL: 'Enter email',
+  EMAIL_ADDRESS: 'Email address',
+  PASSWORD: 'Password',
+  EASYMEALS: 'Easymeals',
+  MEALPLAN: 'Mealplan',
+  MY_PROFILE: 'My Profile',
+  LOGOUT: 'Logout',
+  PROFILE: 'Profile',
+};
+
+const FONT_AWESOME = {
+  REL: 'stylesheet',
+  HREF: 'https://use.fontawesome.com/releases/v5.4.1/css/all.css',
+  INTEGRITY:
+    'sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz',
+  CROSS_ORIGIN: 'anonymous',
+};
+
+const INPUT_TYPES = {
+  PASSWORD: 'password',
+  EMAIL: 'email',
+  CHECKBOX: 'checkbox',
+};
+
+const CONTROL_ID = {
+  FORM_EMAIL: 'formEmail',
+  FORM_PASSWORD: 'formPassword',
+  FORM_BASIC_CHECKBOX: 'formBasicCheckbox',
 };
 
 const CONTAINER_STYLE = {
   HOME: 'home',
+  FOOTER: 'footer',
+  MODAL: 'modal',
+};
+
+const NAVIGATION_BAR = {
+  BG: 'light',
+  EXPAND: 'lg',
+  BRAND_HREF: '#home',
+  TOGGLE_ARIA_CONTROLS: 'basic-navbar-nav',
+  COLLAPSE_ID: 'basic-navbar-nav',
+  NAV_CLASS: 'mr-auto',
+  LINK_HREF: '#link',
+  DROPDOWN_ID: 'basic-nav-dropdown',
+  DROWDOWN_HREF_ITEM_1: '#action/3.1',
+  DROPDOWN_DIVIDER_HREF_ITEM_1: '#action/3.4',
 };
 
 // TODO: GET SECTIONS FROM BACKEND
@@ -587,4 +659,10 @@ export {
   ROUTES,
   BUTTON_STYLE,
   CONTAINER_STYLE,
+  LANDING_STYLE,
+  TEXT,
+  INPUT_TYPES,
+  CONTROL_ID,
+  NAVIGATION_BAR,
+  FONT_AWESOME,
 };

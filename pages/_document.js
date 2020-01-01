@@ -1,6 +1,7 @@
 import Document, {
   Html, Head, Main, NextScript,
 } from 'next/document';
+import { FONT_AWESOME } from '../constants';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -9,14 +10,17 @@ class MyDocument extends Document {
   }
 
   render() {
+    const {
+      REL, HREF, INTEGRITY, CROSS_ORIGIN,
+    } = FONT_AWESOME;
     return (
       <Html>
         <Head>
           <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-            integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-            crossOrigin="anonymous"
+            rel={REL}
+            href={HREF}
+            integrity={INTEGRITY}
+            crossOrigin={CROSS_ORIGIN}
           />
         </Head>
         <body>

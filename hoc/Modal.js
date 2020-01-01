@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { CONTAINER_STYLE } from '../constants';
 
 function withModal(ModalComponent) {
   class WithModal extends PureComponent {
@@ -11,7 +12,7 @@ function withModal(ModalComponent) {
 
       return (
         <>
-          <div className="modal">
+          <div className={CONTAINER_STYLE.MODAL}>
             <ModalComponent {...childrenProps} />
           </div>
         </>
