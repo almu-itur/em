@@ -94,6 +94,7 @@ const CONTAINER_STYLE = {
   HOME: 'home',
   FOOTER: 'footer',
   MODAL: 'modal',
+  MEALPLAN: 'mealplan',
 };
 
 const NAVIGATION_BAR = {

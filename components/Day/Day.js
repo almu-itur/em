@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { DEFAULT_MEALS_IN_A_DAY } from '../../constants';
 import MealCard from '../MealCard';
 
-const Day = ({ dayName, meals }) => (
+const Day = ({ dayName, mealsOnADay }) => (
   <>
     <div className="mealplan-day">
       <div className="mealplan-day mealplan-day-name-container">
@@ -11,9 +11,9 @@ const Day = ({ dayName, meals }) => (
       </div>
       <div className="mealplan-day mealplan-day-meals-container" />
       {Object.keys(DEFAULT_MEALS_IN_A_DAY).map((defaultMeal) => (
-        <div key={defaultMeal} className="mealplan-default-meal-container">
+        <div key={`${dayName}-${defaultMeal}`} className="mealplan-default-meal-container">
           <h2 className="mealplan-default-meal-title">{defaultMeal}</h2>
-          {meals[defaultMeal].map((meal) => (
+          {mealsOnADay[defaultMeal].map((meal) => (
             <MealCard key={meal.id} meal={meal} />
           ))}
         </div>
@@ -24,7 +24,7 @@ const Day = ({ dayName, meals }) => (
 
 Day.propTypes = {
   dayName: PropTypes.string.isRequired,
-  meals: PropTypes.objectOf(PropTypes.object).isRequired,
+  mealsOnADay: PropTypes.objectOf(PropTypes.array).isRequired,
 };
 
 export default Day;

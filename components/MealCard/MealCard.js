@@ -21,12 +21,12 @@ const MealCard = ({
   // removeMealFromCurrentMealPlan,
 }) => {
   console.log('Meal received', meal);
-  // const { meal: { name, id, isFavourite } } = meal;
+  const { searchParams, meal: { name, id, isFavourite } } = meal;
   return (
   // <div className={`meal meal${isFavourite ? ' favourite' : ''}`}>
     <div className="meal">
       {/* draggable onDragStart={onDragStart} */}
-      {/* <p className="meal-font">{name}</p> */}
+      <p className="meal-font">{name}</p>
       <div className="options-meal">
         {/* <button
           type="button"
@@ -52,7 +52,7 @@ const MealCard = ({
 };
 
 MealCard.propTypes = {
-  meal: PropTypes.objectOf(PropTypes.string).isRequired,
+  meal: PropTypes.objectOf(PropTypes.array).isRequired,
   // searchParams: PropTypes.objectOf(PropTypes.object).isRequired,
   // position: PropTypes.objectOf(PropTypes.string).isRequired,
   // onDragStart: PropTypes.func.isRequired,

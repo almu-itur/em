@@ -7,9 +7,9 @@ const MealPlanMobile = () => (
   <div className="mealplan mealplan-meals-container">
     {
         DAYS.map((day) => {
-          const meals = MOCKED_MEALPLAN[day];
+          const mealsOnADay = MOCKED_MEALPLAN[day];
           return (
-            <Day key={day} dayName={day} meals={meals} />
+            <Day key={day} dayName={day} mealsOnADay={mealsOnADay} />
           );
         })
     }
