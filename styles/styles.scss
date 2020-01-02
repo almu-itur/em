@@ -1,5 +1,6 @@
 /* APP */
-/* @import url("https://fonts.googleapis.com/css?family=Roboto"); */
+@import url("https://fonts.googleapis.com/css?family=Roboto"); 
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -11,19 +12,47 @@ body {
     margin: 1%;
 }
 .register-left-container {
-    display: block;
-    background-image: url(/static/media/register-image.5856cd2c.png);
+    background-image: url('/images/register-image.png');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: 50%;
     width: 50%;
     height: 99vh;
     margin: 1%
 }
 
-.register-right-container {
+.register-right-container { 
     margin: auto;
     justify-content: center;
+}
+
+.register-app-title {
+    font-size: 40px;
+    font-weight: 200;
+    color: #F77B72
+}
+
+.register-right-logo {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background-image: url('/images/logo-transparent.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.register-login-redirect-button {
+    border: 0;
+    color: #3897f0;
+    color: rgba(var(--h5f,56,151,240),1);
+    display: inline;
+    padding: 0;
+    position: relative;
+}
+
+#register-button {
+    background-color: #F77B72;
+    border-color: #F77B72;
 }
 
 // FOOTER
@@ -34,6 +63,97 @@ body {
     margin-top: 50px;
     height: 20px;
 }
+
+// HOME
+.home {
+    width: 100%;
+    margin: 2% auto;
+    font-family: 'Roboto', sans-serif;
+}
+.options-container {
+    display: block;
+    padding: 2%;
+}
+
+.options-container-color {
+    display: block;
+    background-color: #f1efef;
+    padding: 2%;
+}
+
+.options-title {
+    font-weight: 700;
+    margin: 1% 0 0 0;
+    text-align: center;
+    font-size: 27px;
+}
+.select-option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-option-color {
+     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-option label {
+    margin-right: 10px;
+}
+.select-option-center label {
+    margin-right: 10px;
+}
+.home-image-container:hover .home-select-option-img {
+    opacity: 0.3;
+}
+.home-select-option-img {
+    width: 250px;
+    height: auto;
+    cursor: pointer;  
+    opacity: 1;
+    transition: .5s ease;
+    background-color: #E4717A;
+}
+.home-select-option-img-active {
+    width: 270px;
+    height: auto;
+    cursor: pointer;  
+    opacity: 0.3;
+    transition: .3s ease;
+    background-color: transparent;
+}
+.form-section-color {
+    padding-top: 0.5px;
+    padding-bottom: 20px;
+    margin-top: 1%;
+    background-color: rgb(241, 239, 239);
+}
+
+.button-create-div-container{
+    display: flex;
+    justify-content: center;
+}
+.button-create {
+    color: white;
+    background-color: #F77B72;
+    width: 30%;
+    height: 5%;
+    padding: 1em;
+    border-radius: 10px;
+    border: none;
+    margin: 3%;
+    text-transform: uppercase;
+}
+select, input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 
 // GENERAL
 
@@ -150,83 +270,6 @@ a:visited {
 .aLink:hover{
   text-decoration: none !important;
   color: rgb(224, 219, 219);  
-}
-
-
-/* HOME */
-.home {
-    width: 90%;
-    margin: 2% auto;
-    font-family: 'Roboto', sans-serif;
-}
-
-.home-title {
-    font-weight: bold;
-    margin: 3% 0 2% 0;
-    text-align: center;
-}
-
-.selectDiet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
-.selectDiet-img {
-    width: 90%;
-    height: 100%;
-    cursor: pointer;  
-}
-
-.selectPlan {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.selectPlan-img {
-    margin-right: 1%;
-    width: 90%;
-    height: 100%; 
-    cursor: pointer; 
-}
-
-.selectIntolerance {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-}
-
-.selectIntolerance-img {
-    margin-right: 1%;
-    width: 90%;
-    height: 100%;
-    cursor: pointer;
-}
-
-.home-create-button-container{
-    display: flex;
-    justify-content: center;
-}
-
-.home-create-button {
-    color: white;
-    background-color: #E4717A;
-    width: 30%;
-    height: 5%;
-    padding: 1em;
-    border-radius: 10px;
-    border: none;
-    margin: 5%;
-}
-
-select, input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
 }
 
 /* MEALPLAN */

@@ -4,26 +4,37 @@ import CredentialsBox from '../CredentialsBox';
 
 const Landing = () => {
   const [isRegisterView, setRegisterView] = useState(true);
-  // const auth = useContext(AuthContext);
+  const auth = useContext(AuthContext);
 
   function handleSubmit(email, password) {
-    console.log(email, password);
+    auth.setIsAuth(true);
   }
 
   function handleClick() {
     setRegisterView(!isRegisterView);
-    // auth.setIsAuth(true);
   }
 
   return (
     <div className="register-general-container">
       <div className="register-left-container" />
       <div className="register-right-container">
-        <CredentialsBox onSubmit={handleSubmit} isRegisterView={isRegisterView} />
-        <p>{isRegisterView ? 'Already registered?' : 'Not yet registered?'}</p>
-        <button type="button" onClick={handleClick}>
-          {isRegisterView ? 'Click here to log in' : 'Click here to register'}
-        </button>
+        <div className="register-right-logo" />
+        <CredentialsBox
+          onSubmit={handleSubmit}
+          isRegisterView={isRegisterView}
+        />
+        <br />
+        <p>
+          {isRegisterView ? 'Already registered? Click ' : 'Not yet registered? Click '}
+          <button
+            className="register-login-redirect-button"
+            type="button"
+            onClick={handleClick}
+          >
+            here
+          </button>
+          {isRegisterView ? ' to log in.' : ' to register.'}
+        </p>
       </div>
     </div>
   );
