@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import MealCard from '../MealCard';
-import { DEFAULT_MEALS_IN_A_DAY, DAYS } from '../../constants';
+import { DAYS } from '../../constants';
 import MOCKED_MEALPLAN from '../../mockData';
 
 const MealPlanSection = ({ sectionName }) => (
